@@ -1,11 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
+
 <body>
-    
+
+    <!-- Weather dashboard -->
+
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1>Weather Dashboard</h1>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Search bar area -->
+
+    <div class="container-fluid">
+
+        <div class="row justify-content-around">
+
+            <div class="col-3 card bg-light mt-2">
+                <div class="form-inline mt-3">
+                    <input class="ml-5" id="city" type="text" placeholder="Search for a City">
+                    <button class="btn btn-primary ml-3" id="submit-city" type="submit">Search</button>
+                </div>
+                <ul class="mr-5 mt-2" id="search-history"></ul>
+                <button class="btn btn-primary" id="clear-history">Clear History</button>
+            </div>
+
+            <!-- Current city weather info -->
+
+            <div class="col-7 mt-4">
+
+                <div class="row" id="current-weather">
+                    <div class="col-7">
+                        <h3><span id="current-city"></span><img id="weather-img" src=""></h3>
+                        <p>Temperature: <span id="temperature"></span></p>
+                        <p>Humidity: <span id="humidity"></span></p>
+                        <p>Wind Speed: <span id="windspeed"></span></p>
+                    </div>
+                </div>
+
+                <!-- Cards for displaying weekly weather -->
+
+                <h3 class="mt-5 mb-5">5-Day Forecast: </h3>
+
+                <div class="card-deck">
+
+                    <div class="card bg-primary">
+                        <div id="day-1" class="card-body p-2">
+                            <h6 class="card-date"></h6>
+                            <img class="weather-icon">
+                            <p class="weather-temp"></p>
+                            <p class="weather-humidity"></p>
+                        </div>
+                    </div>
+
+                    <div class="card bg-primary">
+                        <div id="day-2" class="card-body p-2">
+                            <h6 class="card-date"></h6>
+                            <img class="weather-icon">
+                            <p class="weather-temp"></p>
+                            <p class="weather-humidity"></p>
+                        </div>
+                    </div>
+
+                    <div class="card bg-primary">
+                        <div id="day-3" class="card-body p-2">
+                            <h6 class="card-date"></h6>
+                            <img class="weather-icon">
+                            <p class="weather-temp"></p>
+                            <p class="weather-humidity"></p>
+                        </div>
+                    </div>
+
+                    <div class="card bg-primary">
+                        <div id="day-4" class=" card-body p-2">
+                            <h6 class="card-date"></h6>
+                            <img class="weather-icon">
+                            <p class="weather-temp"></p>
+                            <p class="weather-humidity"></p>
+                        </div>
+                    </div>
+
+                    <div class="card bg-primary">
+                        <div id="day-5" class="card-body p-2">
+                            <h6 class="card-date"></h6>
+                            <img class="weather-icon">
+                            <p class="weather-temp"></p>
+                            <p class="weather-humidity"></p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
